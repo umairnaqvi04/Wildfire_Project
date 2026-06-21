@@ -139,8 +139,12 @@ with st.sidebar:
 # PAGE: HOME
 # ========================================================================
 if page == "Home":
-    st.markdown('<div class="ember-eyebrow">AIC-221 · INTRODUCTION TO MACHINE LEARNING · IQRA UNIVERSITY</div>', unsafe_allow_html=True)
-    st.title("Wildfire Prediction System")
+    logo_col, title_col = st.columns([1, 5], vertical_alignment="center")
+    with logo_col:
+        st.image("iqra_logo.png", width=160)
+    with title_col:
+        st.markdown('<div class="ember-eyebrow">AIC-221 · INTRODUCTION TO MACHINE LEARNING · IQRA UNIVERSITY</div>', unsafe_allow_html=True)
+        st.title("Wildfire Prediction System")
     st.markdown(
         "Predicting whether weather and fire-index conditions in Portugal's northeast "
         "forests are likely to produce **significant burn damage**, using the UCI "
